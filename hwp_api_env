@@ -1,0 +1,18 @@
+#이미지, PDF 텍스트 추출
+API	http://{ip}:{port}/argoocr
+Method	POST
+Content-Type	multipart/form-data
+
+#hwp 문서 레이아웃 등 추출
+API	http://{ip}:{port}/argodocument
+Method	POST
+Content-Type	multipart/form-data
+
+#한컴 통합문서뷰어 DocsConverter 미들웨어
+#실제 주소 예: HANCOM_DOCSCONVERTER_BASE=http://192.168.0.10:8101
+HANCOM_DOCSCONVERTER_BASE=http://{middleware_ip}:8101
+
+#문서 변환 URL 형식
+#HWP/HWPX -> PDF:  http://미들웨어_IP_주소:8101/hwp/doc2pdf?file_path=문서경로
+#DOC/DOCX -> PDF:  http://미들웨어_IP_주소:8101/word/doc2pdf?file_path=문서경로
+

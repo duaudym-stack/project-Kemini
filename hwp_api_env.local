@@ -1,0 +1,7 @@
+# Put the real argodocument server base URL here.
+# Example:
+# ARGO_API_BASE=http://192.168.0.10:8080
+ARGO_API_BASE=
+
+# You can also set the full endpoint directly instead:
+# ARGO_DOCUMENT_API_URL=http://192.168.0.10:8080/argodocument
