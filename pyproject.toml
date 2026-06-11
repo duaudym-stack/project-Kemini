@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "figure-planner"
+version = "2.1.0"
+description = "보고서 그림 자동 배치 AI — 그림이 없는 보고서에서 필요한 그림의 위치·개수·유형·내용을 자동 식별"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "python-docx>=1.1.0",
+    "pypdf>=4.2.0",
+    "pymupdf>=1.24.0",
+    "openai>=1.30.0",
+    "anthropic>=0.25.0",
+    "google-genai>=0.3.0",
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.30.0",
+    "python-dotenv>=1.0.0",
+    "python-multipart>=0.0.9",
+    "pydantic>=2.7.0",
+    "truststore>=0.10.0",
+    "olefile>=0.47",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "httpx>=0.27.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
